@@ -4,7 +4,7 @@ import ComponentStore from '@/components/Home/stone';
 import Services from '@/components/Home/services';
 import Footer from '@/components/Home/footer';
 import News from '@/components/Home/blog';
-import Review from '@/components/Home/review';
+import Review from '@/public/hero/testimonial';
 import Experts from '@/components/Home/astro';  
 import AboutAstrologer from '@/components/Home/about';
 import Rashi from '@/components/Home/Rashistone';

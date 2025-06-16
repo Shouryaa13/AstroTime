@@ -40,30 +40,30 @@ const Rashi: React.FC = () => {
         </h2>
       </div>
 
-      <div className="w-full max-w-4xl px-4 sm:px-8 py-4 flex flex-col items-center">
-        <h3 className="text-3xl font-normal mb-8 text-gray-800 text-center">
+      <div className="w-full max-w-7xl px-4 sm:px-8 py-4 flex flex-col items-center">
+        <h3 className="text-3xl font-normal mb-12 text-gray-800 text-center">
           Select Your Zodiac Sign
         </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 w-full">
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 sm:gap-8 w-full">
           {zodiacSigns.map((sign) => (
             <div
               key={sign.name}
-              className={`flex flex-col items-center justify-center gap-5 border-2 rounded-xl p-4 sm:p-8 transition-all duration-300 cursor-pointer ${
+              className={`flex flex-col items-center justify-center gap-3 border-2 rounded-xl p-3 sm:p-5 transition-all duration-300 cursor-pointer ${
                 selectedSign.name === sign.name
-                  ? "border-red-400 text-red-500 bg-red-50 shadow-lg"
+                  ? "border-gray-400 text-gray-700 bg-gray-50 shadow-lg"
                   : "border-gray-200"
               }`}
               onClick={() => setSelectedSign(sign)}
             >
               <Image
                 alt={`${sign.name} zodiac symbol`}
-                className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+                className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
                 src={sign.src}
-                width={128}
-                height={128}
+                width={96}
+                height={96}
                 unoptimized
               />
-              <span className="text-base sm:text-lg text-center font-light">
+              <span className="text-sm sm:text-base text-center font-light">
                 {sign.name}
               </span>
             </div>
